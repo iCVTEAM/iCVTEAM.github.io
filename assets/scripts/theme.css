@@ -1,0 +1,102 @@
+.black-frame{
+    height: 100%;
+    background: #171617;
+    width: 100%;
+    display : flex;
+    align-items : center;
+    justify-content: center;
+}
+.card {
+    margin: 10px;
+}
+
+.card .media-content .title,
+.card .media-content .subtitle {
+    color: #4a4a4a;
+}
+
+.subtitle {
+    margin-top: -0.8rem !important;
+}
+
+.card-footer {
+    text-align: center;
+}
+
+h1.title {
+    font-size: 30px;
+    margin-bottom: 10px !important;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: bold;
+}
+.author {
+    display: inline;
+    font-size: 16px;
+    margin: 15px;
+    color: dimgray;
+}
+.group {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #0458a5;
+}
+.aff {
+    font-size: 18px;
+    color: gray;
+}
+.link {
+    color: #0458a5;
+    font-size: 16px;
+}
+.head_cap {
+    margin-top: 10px;
+    font-size: 18px;
+}
+.hero-body {
+    padding: 20px;
+}
+
+.column {
+    padding: 0px !important;
+}
+.subtitle {
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+.hero {
+    background-color: inherit !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .author {
+        font-size: 12px;
+    }
+
+    .group {
+        font-size: 12px;
+    }
+
+    .aff {
+        font-size: 12px;
+    }
+
+    .button-clipboard-tooltip {
+        display: none;
+        color: white;
+        background: rgba(74, 74, 74, 0.9);
+        border-radius: 2px;
+        padding: 0.5rem 1rem;
+        margin-right: 1rem;
+        text-overflow: ellipsis;
+        white-space: pre;
+    }
+
+    body {
+        background-color: #ffffff;
+    }
+}
