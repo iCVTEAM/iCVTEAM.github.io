@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>GaRD</title>
+    <link rel="stylesheet" type="text/css" href="assets/scripts/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/scripts/theme.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <section class="hero is-light" style="">
+      <div class="hero-body" style="padding-top: 50px;">
+        <div class="container" style="text-align: center;margin-bottom:5px;">
+          <h1 class="title">
+            Graph-based High-Order Relation Discovery for Fine-grained Recognition
+          </h1>
+
+          <div class="author">Yifan Zhao<sup>1</sup></div>
+          <div class="author">Ke Yan<sup>2</sup></div>
+          <div class="author">Feiyue Huang<sup>2</sup></div>
+          <div class="author">Jia Li<sup>1,3</sup>*</div>
+          <div class="group">
+            <a href="http://cvteam.net/">CVTEAM</a>
+          </div>
+          <div class="aff">
+            <p><sup>1</sup>State Key Laboratory of Virtual Reality Technology and Systems, SCSE, Beihang University, Beijing, China</p>
+            <p><sup>2</sup>Tencent Youtu Lab, Shanghai, China</p>
+            <p><sup>3</sup>Peng Cheng Laboratory, Shenzhen, China</p>
+          </div>
+          <div class="con">
+            <p  style="font-size: 24px; margin-top:5px; margin-bottom: 15px;">
+            CVPR 2021
+            </p>
+          </div>
+          <div class="columns">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column">
+              <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Zhao_Graph-Based_High-Order_Relation_Discovery_for_Fine-Grained_Recognition_CVPR_2021_paper.pdf" target="_blank">
+                <p class="link">Paper</p>
+              </a>
+            </div>
+            <div class="column">
+              <p class="link">Code</p>
+            </div>
+            <div class="column"></div>
+            <div class="column"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div style="text-align: center;">
+      <div class="container" style="max-width:850px">
+        <div style="text-align: center;">
+          <img src="assets/GaRD/modules.png" class="centerImage">
+        </div>
+      </div>
+      <div class="head_cap">
+        <p style="color:gray;">
+          Three modules of GaRD
+        </p>
+      </div>
+    </div>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container" style="max-width: 800px" >
+          <h1 style="">Abstract</h1>
+          <p  style="text-align: justify; font-size: 17px;">
+            Fine-grained object recognition aims to learn effective
+            features that can identify the subtle differences between visually similar objects. Most of the existing works tend to
+            amplify discriminative part regions with attention mechanisms. Besides its unstable performance under complex backgrounds, the intrinsic interrelationship between
+            different semantic features is less explored. Toward this
+            end, we propose an effective graph-based relation discovery approach to build a contextual understanding of highorder relationships. In our approach, a high-dimensional
+            feature bank is first formed and jointly regularized with
+            semantic- and positional-aware high-order constraints, endowing rich attributes to feature representations. Second,
+            to overcome the high-dimension curse, we propose a graphbased semantic grouping strategy to embed this high-order
+            tensor bank into a low-dimensional space. Meanwhile, a
+            group-wise learning strategy is proposed to regularize the
+            features focusing on the cluster embedding center. With the
+            collaborative learning of three modules, our module is able
+            to grasp the stronger contextual details of fine-grained objects. Experimental evidence demonstrates our approach
+            achieves new state-of-the-art on 4 widely-used fine-grained
+            object recognition benchmarks.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="hero is-light" style="background-color:#FFFFFF;">
+      <div class="hero-body">
+        <div class="container" style="max-width:800px;margin-bottom:20px;">
+          <h1>
+            Strategies illustration
+          </h1>
+        </div>
+        <div class="container" style="max-width:800px">
+          <div style="text-align: center;">
+            <img src="assets/GaRD/compare.png" class="centerImage">
+          </div>
+        </div>
+      </div>
+    </section>
+  <section class="hero" style="padding-top:0px;">
+    <div class="hero-body">
+      <div class="container" style="max-width:800px;">
+  <div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      BibTex Citation
+    </p>
+
+    <a class="card-header-icon button-clipboard" style="border:0px; background: inherit;" data-clipboard-target="#bibtex-info" >
+      <i class="fa fa-copy" height="20px"></i>
+    </a>
+  </header>
+    <div class="card-content">
+<pre style="background-color:inherit;padding: 0px;" id="bibtex-info">
+    @InProceedings{Zhao_2021_CVPR,
+    title     = {Graph-Based High-Order Relation Discovery for Fine-Grained Recognition},
+    author    = {Zhao, Yifan and Yan, Ke and Huang, Feiyue and Li, Jia},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    pages     = {15079-15088}
+    month     = {June},
+    year      = {2021},
+}</pre>
+    </div>
+    </section>
+    <script type="text/javascript" src="assets/scripts/clipboard.min.js"></script>
+    <script>
+      new ClipboardJS('.button-clipboard');
+    </script>
+  </body>
+</html>
