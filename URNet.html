@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>URNet</title>
+    <link rel="stylesheet" type="text/css" href="assets/scripts/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/scripts/theme.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <section class="hero is-light" style="">
+      <div class="hero-body" style="padding-top: 50px;">
+        <div class="container" style="text-align: center;margin-bottom:5px;">
+          <h1 class="title">
+            Learning from Large-scale Noisy Web Data with Ubiquitous Reweighting for Image Classification
+          </h1>
+
+          <div class="author">Jia Li</div>
+          <div class="author">Yafei Song</div>
+          <div class="author">Jianfeng Zhu</div>
+          <div class="author">Lele Cheng</div>
+          <div class="author">Ying Su</div>
+          <div class="author">Lin Ye</div>
+          <div class="author">Pengcheng Yuan</div>
+          <div class="author">Shumin Han</div>
+          <div class="group">
+            <a href="http://cvteam.net/">CVTEAM</a>
+          </div>
+          <div class="con">
+            <p  style="font-size: 24px; margin-top:5px; margin-bottom: 15px;">
+            TPAMI 2021
+            </p>
+          </div>
+          <div class="columns">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column">
+              <a href="https://ieeexplore.ieee.org/abstract/document/8941250" target="_blank">
+                <p class="link">Paper</p>
+              </a>
+            </div>
+            <div class="column">
+                <p class="link">Code</p>
+            </div>
+            <div class="column"></div>
+            <div class="column"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container" style="max-width: 800px" >
+          <h1 style="">Abstract</h1>
+          <p  style="text-align: justify; font-size: 17px;">
+            Many important advances of deep learning techniques have
+            originated from the efforts of addressing the image classification task
+            on large-scale datasets. However, the construction of clean datasets is
+            costly and time-consuming since the Internet is overwhelmed by noisy
+            images with inadequate and inaccurate tags. In this paper, we propose
+            a Ubiquitous Reweighting Network (URNet) that can learn an image
+            classification model from noisy web data. By observing the web data, we
+            find that there are five key challenges, i.e., imbalanced class sizes, high
+            intra-classes diversity and inter-class similarity, imprecise instances,
+            insufficient representative instances, and ambiguous class labels. With
+            these challenges in mind, we assume every training instance has the
+            potential to contribute positively by alleviating the data bias and noise via
+            reweighting the influence of each instance according to different class
+            sizes, large instance clusters, its confidence, small instance bags, and
+            the labels. In this manner, the influence of bias and noise in the data can
+            be gradually alleviated, leading to the steadily improving performance of
+            URNet. Experimental results in the WebVision 2018 challenge with 16
+            million noisy training images from 5000 classes show that our approach
+            outperforms state-of-the-art models and ranks first place in the image
+            classification task.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="hero is-light" style="background-color:#FFFFFF;">
+        <div class="hero-body">
+          <div class="container" style="max-width:800px;margin-bottom:20px;">
+            <h1>
+                Examples of clustering result
+            </h1>
+          </div>
+          <div class="container" style="max-width:800px">
+            <div style="text-align: center;">
+              <img src="assets/URNet/clustering examples.png" class="centerImage">
+            </div>
+          </div>S
+        </div>
+      </section>
+    <section class="hero is-light" style="background-color:#FFFFFF;">
+      <div class="hero-body">
+        <div class="container" style="max-width:800px;margin-bottom:20px;">
+          <h1>
+            The results of WebVision Image Classification Challenge 2018
+          </h1>
+        </div>
+        <div class="container" style="max-width:800px">
+          <div style="text-align: center;">
+            <img src="assets/URNet/challenge result.png" class="centerImage">
+          </div>
+        </div>
+      </div>
+    </section>
+  <section class="hero" style="padding-top:0px;">
+    <div class="hero-body">
+      <div class="container" style="max-width:800px;">
+  <div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      BibTex Citation
+    </p>
+
+    <a class="card-header-icon button-clipboard" style="border:0px; background: inherit;" data-clipboard-target="#bibtex-info" >
+      <i class="fa fa-copy" height="20px"></i>
+    </a>
+  </header>
+    <div class="card-content">
+<pre style="background-color:inherit;padding: 0px;" id="bibtex-info">@article{li2019learning,
+    title={Learning from large-scale noisy Web data with ubiquitous reweighting for image classification},
+    author={Li, Jia and Song, Yafei and Zhu, Jianfeng and Cheng, Lele and Su, Ying and Ye, Lin and Yuan, Pengcheng and Han, Shumin},
+    journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+    year={2019},
+    publisher={IEEE}
+}</pre>
+    </div>
+    </section>
+    <script type="text/javascript" src="assets/scripts/clipboard.min.js"></script>
+    <script>
+      new ClipboardJS('.button-clipboard');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ICCM</title>
+    <link rel="stylesheet" type="text/css" href="assets/scripts/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/scripts/theme.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <section class="hero is-light" style="">
+      <div class="hero-body" style="padding-top: 50px;">
+        <div class="container" style="text-align: center;margin-bottom:5px;">
+          <h1 class="title">
+            Informative and Consistent Correspondence Mining for Cross-Domain Weakly Supervised Object Detection
+          </h1>
+
+          <div class="author">Luwei Hou*<sup>1,3</sup></div>
+          <div class="author">Yu Zhang*<sup>3</sup></div>
+          <div class="author">Kui Fu<sup>1</sup></div>
+          <div class="author">Jia Li<sup>1,2</sup></div>
+          <div class="group">
+            <a href="http://cvteam.net/">CVTEAM</a>
+          </div>
+          <div class="aff">
+            <p><sup>1</sup>1State Key Laboratory of Virtual Reality Technology and Systems, School of Computer Science and Engineering, Beihang University, Beijing, China</p>
+            <p><sup>2</sup>Pengcheng Laboratory, Shenzhen, China</p>
+            <p><sup>3</sup>SenseTime Reasearch</p>
+          </div>
+          <div class="con">
+            <p  style="font-size: 24px; margin-top:5px; margin-bottom: 15px;">
+            CVPR 2021
+            </p>
+          </div>
+          <div class="columns">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column">
+              <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Hou_Informative_and_Consistent_Correspondence_Mining_for_Cross-Domain_Weakly_Supervised_Object_CVPR_2021_paper.pdf" target="_blank">
+                <p class="link">Paper</p>
+              </a>
+            </div>
+            <div class="column">
+                <p class="link">Code</p>
+            </div>
+            <div class="column"></div>
+            <div class="column"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div style="text-align: center;">
+      <div class="container" style="max-width:850px">
+        <div style="text-align: center;">
+          <img src="assets/ICCM/pipeline.png" class="centerImage">
+        </div>
+      </div>
+      <div class="head_cap">
+        <p style="color:gray;">
+          The pipeline of approach
+        </p>
+      </div>
+    </div>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container" style="max-width: 800px" >
+          <h1 style="">Abstract</h1>
+          <p  style="text-align: justify; font-size: 17px;">
+            Cross-domain weakly supervised object detection aims
+            to adapt object-level knowledge from a fully labeled source
+            domain dataset (i.e., with object bounding boxes) to train
+            object detectors for target domains that are weakly labeled
+            (i.e., with image-level tags). Instead of domain-level distribution matching, as popularly adopted in the literature, we
+            propose to learn pixel-wise cross-domain correspondences
+            for more precise knowledge transfer. It is realized through
+            a novel cross-domain co-attention scheme trained as region
+            competition. In this scheme, the cross-domain correspondence module seeks for informative features on the target
+            domain image, which if warped to the source domain image, could best explain its annotations. Meanwhile, a collaborative mask generator competes to mask out the relevant target image region to make the remaining features
+            uninformative. Such competitive learning strives to correlate the full foreground in cross-domain image pairs, revealing the accurate object extent in target domain. To alleviate the ambiguity of inter-domain correspondence learning,
+            a domain-cycle consistency regularizer is further proposed
+            to leverage the more reliable intra-domain correspondence.
+            The proposed approach achieves consistent improvements
+            over existing approaches by a considerable margin, demonstrated by the experiments on various datasets.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="hero is-light" style="background-color:#FFFFFF;">
+      <div class="hero-body">
+        <div class="container" style="max-width:800px;margin-bottom:20px;">
+          <h1>
+            Qualitative Comparison
+          </h1>
+        </div>
+        <div class="container" style="max-width:800px">
+          <div style="text-align: center;">
+            <img src="assets/ICCM/results.png" class="centerImage">
+          </div>
+        </div>
+      </div>
+    </section>
+  <section class="hero" style="padding-top:0px;">
+    <div class="hero-body">
+      <div class="container" style="max-width:800px;">
+  <div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      BibTex Citation
+    </p>
+
+    <a class="card-header-icon button-clipboard" style="border:0px; background: inherit;" data-clipboard-target="#bibtex-info" >
+      <i class="fa fa-copy" height="20px"></i>
+    </a>
+  </header>
+    <div class="card-content">
+<pre style="background-color:inherit;padding: 0px;" id="bibtex-info">@InProceedings{Hou_2021_CVPR,
+    title     = {Informative and Consistent Correspondence Mining for Cross-Domain Weakly Supervised Object Detection},
+    author    = {Hou, Luwei and Zhang, Yu and Fu, Kui and Li, Jia},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    pages     = {9929-9938}
+    month     = {June},
+    year      = {2021},
+}
+</pre>
+    </div>
+    </section>
+    <script type="text/javascript" src="assets/scripts/clipboard.min.js"></script>
+    <script>
+      new ClipboardJS('.button-clipboard');
+    </script>
+  </body>
+</html>
