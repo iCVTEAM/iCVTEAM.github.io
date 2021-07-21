@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>S3Net</title>
+    <link rel="stylesheet" type="text/css" href="assets/scripts/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/scripts/theme.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <section class="hero is-light" style="">
+      <div class="hero-body" style="padding-top: 50px;">
+        <div class="container" style="text-align: center;margin-bottom:5px;">
+          <h1 class="title">
+            Selective, Structural, Subtle: Trilinear Spatial-Awareness
+          </h1>
+          <h1 class="title">
+            for Few-Shot Fine-Grained Visual Recognition
+          </h1>
+
+          <div class="author">Heng Wu<sup>1</sup></div>
+          <div class="author">Yifan Zhao<sup>1</sup></div>
+          <div class="author">Jia Li<sup>1,2,*</sup></div>
+          <div class="group">
+            <a href="http://cvteam.net/">CVTEAM</a>
+          </div>
+          <div class="aff">
+            <p><sup>1</sup>State Key Laboratory of Virtual Reality Technology and Systems, SCSE, Beihang University, Beijing, China</p>
+            <p><sup>2</sup>Pengcheng Laboratory, Shenzhen, China</p>
+          </div>
+          <div class="con">
+            <p  style="font-size: 24px; margin-top:5px; margin-bottom: 15px;">
+            ICME 2021
+            </p>
+          </div>
+          <div class="columns">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column">
+              <a href="https://ieeexplore.ieee.org/abstract/document/9428223" target="_blank">
+                <p class="link">Paper</p>
+              </a>
+            </div>
+            <div class="column">
+              <a href="https://github.com/iCVTEAM/S3Net/" target="_blank">
+                <p class="link">Code</p>
+              </a>
+            </div>
+            <div class="column"></div>
+            <div class="column"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div style="text-align: center;">
+      <div class="container" style="max-width:850px">
+        <div style="text-align: center;">
+          <img src="assets/S3Net/head.png" class="centerImage">
+        </div>
+      </div>
+      <div class="head_cap">
+        <p style="color:gray;">
+          The framework of S3Net
+        </p>
+      </div>
+    </div>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container" style="max-width: 800px" >
+          <h1 style="">Abstract</h1>
+          <p  style="text-align: justify; font-size: 17px;">
+            Few-shot learning aims to recognize the novel categories from
+            a few examples. However, most of the existing approaches usually 
+            focus on general image classification and fail to handle subtle 
+            differences between images. To alleviate this issue, we propose 
+            a trilinear spatial-awareness network for fewshot-grained visual 
+            recognition, called S3Net, which is composed of a spatial selection 
+            module, structural pyramid descriptor, and subtle difference mining 
+            module. Specifically,we first build the global relation to strengthen 
+            the features by spatial selection module. The structural pyramid 
+            descriptor then constructs a multi-scale representation for enhancing
+            the rich contextual information by exploiting different receptive 
+            fields in the same feature layer. Furthermore, a similarity
+            loss based on local descriptors and a global classification loss
+            is design to help the network learn discrimination capability
+            by handling subtle differences in confused or near-duplicated
+            samples. Extensive experiments on 4 few-shot fine-grained
+            benchmarks demonstrate that our proposed approach is effective 
+            and outperforms state-of-the-art models by large margins.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="hero is-light" style="background-color:#FFFFFF;">
+      <div class="hero-body">
+        <div class="container" style="max-width:800px;margin-bottom:20px;">
+          <h1>
+            Performance Comparison
+          </h1>
+        </div>
+        <div class="container" style="max-width:800px">
+          <div style="text-align: center;">
+            <img src="assets/S3Net/perfcomp.png" class="centerImage">
+          </div>
+        </div>
+      </div>
+    </section>
+  <section class="hero" style="padding-top:0px;">
+    <div class="hero-body">
+      <div class="container" style="max-width:800px;">
+  <div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      BibTex Citation
+    </p>
+
+    <a class="card-header-icon button-clipboard" style="border:0px; background: inherit;" data-clipboard-target="#bibtex-info" >
+      <i class="fa fa-copy" height="20px"></i>
+    </a>
+  </header>
+    <div class="card-content">
+<pre style="background-color:inherit;padding: 0px;" id="bibtex-info">@article{9428223,
+  title={Selective, Structural, Subtle: Trilinear Spatial-Awareness for Few-Shot Fine-Grained Visual Recognition}, 
+  author={Wu, Heng and Zhao, Yifan and Li, Jia},
+  booktitle={2021 IEEE International Conference on Multimedia and Expo (ICME)}, 
+  pages={1-6},
+  year={2021},
+}</pre>
+    </div>
+    </section>
+    <script type="text/javascript" src="assets/scripts/clipboard.min.js"></script>
+    <script>
+      new ClipboardJS('.button-clipboard');
+    </script>
+  </body>
+</html>
