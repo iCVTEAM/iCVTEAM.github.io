@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CFR</title>
+    <link rel="stylesheet" type="text/css" href="assets/scripts/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/scripts/theme.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <section class="hero is-light" style="">
+      <div class="hero-body" style="padding-top: 50px;">
+        <div class="container" style="text-align: center;margin-bottom:5px;">
+          <h1 class="title">
+            Cartoon Face Recognition: A Benchmark Dataset
+          </h1>
+
+          <div class="author">Yi Zheng<sup>1</sup></div>
+          <div class="author">Yifan Zhao<sup>2</sup></div>
+          <div class="author">Mengyuan Ren<sup>1</sup></div>
+          <div class="author">He Yan<sup>1</sup></div>
+          <div class="author">Xiangju Lu<sup>1</sup>*</div>
+          <div class="author">Junhui Liu<sup>1</sup></div>
+          <div class="author">Jia Li<sup>2</sup>*</div>
+          <div class="group">
+            <a href="http://cvteam.net/">CVTEAM</a>
+          </div>
+          <div class="aff">
+            <p><sup>1</sup>iQIYI,Inc</p>
+            <p><sup>2</sup>State Key Laboratory of Virtual Reality Technology and Systems, SCSE, Beihang University</p>
+          </div>
+          <div class="con">
+            <p  style="font-size: 24px; margin-top:5px; margin-bottom: 15px;">
+            ACM MM 2020
+            </p>
+          </div>
+          <div class="columns">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column">
+              <a href="https://arxiv.org/abs/1907.13394" target="_blank">
+                <p class="link">Paper</p>
+              </a>
+            </div>
+            <div class="column">
+                <p class="link">Code</p>
+            </div>
+            <div class="column"></div>
+            <div class="column"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div style="text-align: center;">
+      <div class="container" style="max-width:850px">
+        <div style="text-align: center;">
+          <img src="assets/CFR/dataset overview.png" class="centerImage">
+        </div>
+      </div>
+      <div class="head_cap">
+        <p style="color:gray;">
+          The overview of dataset
+        </p>
+      </div>
+    </div>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container" style="max-width: 800px" >
+          <h1 style="">Abstract</h1>
+          <p  style="text-align: justify; font-size: 17px;">
+            Recent years have witnessed increasing attention in cartoon media, 
+            powered by the strong demands of industrial applications. As the 
+            first step to understand this media, cartoon face recognition is a 
+            crucial but less-explored task with few datasets proposed. In this 
+            work, we first present a new challenging benchmark dataset, 
+            consisting of 389,678 images of 5,013 cartoon characters annotated 
+            with identity, bounding box, pose, and other auxiliary attributes. 
+            The dataset, named iCartoonFace, is currently the largest-scale, 
+            high-quality, richannotated, and spanning multiple occurrences in 
+            the field of image recognition, including near-duplications, 
+            occlusions, and appearance changes. In addition, we provide two 
+            types of annotations for cartoon media, i.e., face recognition, and 
+            face detection, with the help of a semi-automatic labeling algorithm.
+            To further investigate this challenging dataset, we propose a 
+            multi-task domain adaptation approach that jointly utilizes the 
+            human and cartoon domain knowledge with three discriminative 
+            regularizations. We hence perform a benchmark analysis of the 
+            proposed dataset and verify the superiority of the proposed approach 
+            in the cartoon face recognition task. We believe this public 
+            availability will attract more research attention in broad practical 
+            application scenarios.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="hero is-light" style="background-color:#FFFFFF;">
+      <div class="hero-body">
+        <div class="container" style="max-width:800px;margin-bottom:20px;">
+          <h1>
+            Dataset comparison
+          </h1>
+        </div>
+        <div class="container" style="max-width:800px">
+          <div style="text-align: center;">
+            <img src="assets/CFR/comparison of dataset.png" class="centerImage">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="hero is-light" style="background-color:#FFFFFF;">
+        <div class="hero-body">
+          <div class="container" style="max-width:800px;margin-bottom:20px;">
+            <h1>
+              Semi-automic assembling process
+            </h1>
+          </div>
+          <div class="container" style="max-width:800px">
+            <div style="text-align: center;">
+              <img src="assets/CFR/semi_automic process.png" class="centerImage">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="hero is-light" style="background-color:#FFFFFF;">
+        <div class="hero-body">
+          <div class="container" style="max-width:800px;margin-bottom:20px;">
+            <h1>
+              Overview of proposed approach
+            </h1>
+          </div>
+          <div class="container" style="max-width:800px">
+            <div style="text-align: center;">
+              <img src="assets/CFR/proposed approach.png" class="centerImage">
+            </div>
+          </div>
+        </div>
+      </section>
+  <section class="hero" style="padding-top:0px;">
+    <div class="hero-body">
+      <div class="container" style="max-width:800px;">
+  <div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      BibTex Citation
+    </p>
+
+    <a class="card-header-icon button-clipboard" style="border:0px; background: inherit;" data-clipboard-target="#bibtex-info" >
+      <i class="fa fa-copy" height="20px"></i>
+    </a>
+  </header>
+    <div class="card-content">
+<pre style="background-color:inherit;padding: 0px;" id="bibtex-info">@misc{zheng2020cartoon,
+title={Cartoon Face Recognition: A Benchmark Dataset}, 
+author={Yi Zheng and Yifan Zhao and Mengyuan Ren and He Yan and Xiangju Lu and Junhui Liu and Jia Li},
+year={2020},
+eprint={1907.13394},
+archivePrefix={arXiv},
+primaryClass={cs.CV}
+}</pre>
+    </div>
+    </section>
+    <script type="text/javascript" src="assets/scripts/clipboard.min.js"></script>
+    <script>
+      new ClipboardJS('.button-clipboard');
+    </script>
+  </body>
+</html>

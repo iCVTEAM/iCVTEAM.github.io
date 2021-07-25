@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PGCNet</title>
+    <link rel="stylesheet" type="text/css" href="assets/scripts/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/scripts/theme.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <section class="hero is-light" style="">
+      <div class="hero-body" style="padding-top: 50px;">
+        <div class="container" style="text-align: center;margin-bottom:5px;">
+          <h1 class="title">
+            Pyramid Global Context Network for Image Dehazing
+          </h1>
+
+          <div class="author">Dong Zhao</div>
+          <div class="author">Long Xu</div>
+          <div class="author">Lin Ma</div>
+          <div class="author">Jia Li</div>
+          <div class="author">Yihua Yan</div>
+          <div class="group">
+            <a href="http://cvteam.net/">CVTEAM</a>
+          </div>
+          <div class="con">
+            <p  style="font-size: 24px; margin-top:5px; margin-bottom: 15px;">
+            TCSVT 2020
+            </p>
+          </div>
+          <div class="columns">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column">
+              <a href="https://ieeexplore.ieee.org/abstract/document/9252912" target="_blank">
+                <p class="link">Paper</p>
+              </a>
+            </div>
+            <div class="column">
+                <p class="link">Code</p>
+            </div>
+            <div class="column"></div>
+            <div class="column"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div style="text-align: center;">
+      <div class="container" style="max-width:850px">
+        <div style="text-align: center;">
+          <img src="assets/PGCNet/Architecture.png" class="centerImage">
+        </div>
+      </div>
+      <div class="head_cap">
+        <p style="color:gray;">
+          The architecture of PGC
+        </p>
+      </div>
+    </div>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container" style="max-width: 800px" >
+          <h1 style="">Abstract</h1>
+          <p  style="text-align: justify; font-size: 17px;">
+            Haze caused by atmospheric scattering and absorption would severely affect scene visibility of an image. Thus,
+            image dehazing for haze removal has been widely studied in
+            the literature. Within a hazy image, haze is not confined in
+            a small local patch/position, while widely diffusing in a whole
+            image. Under this circumstance, global context is a crucial
+            factor in the success of dehazing, which was seldom investigated
+            in existing dehazing algorithms. In the literature, the global
+            context (GC) block has been designed to learn point-wise longrange dependencies of an image for global context modeling;
+            however, patch-wise long-range dependencies were ignored. To
+            image dehazing, patch-wise long-range dependencies should be
+            highlighted to cooperate with patch-wise operations of image
+            dehazing. In this paper, we first extend the point-wise GC into
+            a Pyramid Global Context (PGC), which is a multi-scale GC,
+            after undergoing the pyramid pooling. Thus, patch-wise longrange dependencies can be explored by the PGC. Then, the
+            proposed PGC is plugged into a U-Net, getting an attentive
+            U-Net. Further, the attentive U-Net is optimized by importing
+            ResNet’s shortcut connection and dilated convolution. Thus, the
+            finalized dehazing model can explore both long-range and patchwise context dependencies for global context modeling, which
+            is crucial for image dehazing. The extensive experiments on
+            synthetic databases and real-world hazy images demonstrate the
+            superiority of our model over other representative state-of-theart models from both quantitative and qualitative comparisons.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="hero is-light" style="background-color:#FFFFFF;">
+      <div class="hero-body">
+        <div class="container" style="max-width:800px;margin-bottom:20px;">
+          <h1>
+            Qualitative Comparison
+          </h1>
+        </div>
+        <div class="container" style="max-width:800px">
+          <div style="text-align: center;">
+            <img src="assets/PGCNet/result.png" class="centerImage">
+          </div>
+        </div>
+      </div>
+    </section>
+  <section class="hero" style="padding-top:0px;">
+    <div class="hero-body">
+      <div class="container" style="max-width:800px;">
+  <div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      BibTex Citation
+    </p>
+
+    <a class="card-header-icon button-clipboard" style="border:0px; background: inherit;" data-clipboard-target="#bibtex-info" >
+      <i class="fa fa-copy" height="20px"></i>
+    </a>
+  </header>
+    <div class="card-content">
+<pre style="background-color:inherit;padding: 0px;" id="bibtex-info">@ARTICLE{9252912,
+author={D. {Zhao} and L. {Xu} and L. {Ma} and J. {Li} and Y. {Yan}},
+journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
+title={Pyramid Global Context Network for Image Dehazing}, 
+year={2020},
+volume={},
+number={},
+pages={1-1},
+doi={10.1109/TCSVT.2020.3036992}
+}</pre>
+    </div>
+    </section>
+    <script type="text/javascript" src="assets/scripts/clipboard.min.js"></script>
+    <script>
+      new ClipboardJS('.button-clipboard');
+    </script>
+  </body>
+</html>
