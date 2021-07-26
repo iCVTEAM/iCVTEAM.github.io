@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>UVANet</title>
+    <link rel="stylesheet" type="text/css" href="assets/scripts/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/scripts/theme.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <section class="hero is-light" style="">
+      <div class="hero-body" style="padding-top: 50px;">
+        <div class="container" style="text-align: center;margin-bottom:5px;">
+          <h1 class="title">
+            Ultrafast Video Attention Prediction with
+          </h1>
+          <h1 class="title">
+             Coupled Knowledge Distillation
+          </h1>
+
+          <div class="author">Kui Fu<sup>1</sup></div>
+          <div class="author">Peipei Shi<sup>2</sup></div>
+          <div class="author">Yafei Song<sup>3</sup></div>
+          <div class="author">Shiming Ge<sup>4</sup></div>
+          <div class="author">Xiangju Lu<sup>2</sup></div>
+          <div class="author">Jia Li<sup>1,*</sup></div>
+          <div class="group">
+            <a href="http://cvteam.net/">CVTEAM</a>
+          </div>
+          <div class="aff">
+            <p><sup>1</sup>State Key Laboratory of Virtual Reality Technology and Systems, SCSE, Beihang University</p>
+            <p><sup>2</sup>iQIYI, Inc</p>
+            <p><sup>3</sup>National Engineering Laboratory for Video Technology, School of EE&CS, Peking University</p>
+            <p><sup>4</sup>Institute of Information Engineering, Chinese Academy of Sciences</p>
+          </div>
+          <div class="con">
+            <p  style="font-size: 24px; margin-top:5px; margin-bottom: 15px;">
+            AAAI 2020
+            </p>
+          </div>
+          <div class="columns">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column">
+              <a href="https://arxiv.org/abs/1904.04449" target="_blank">
+                <p class="link">Paper</p>
+              </a>
+            </div>
+            <div class="column">
+              <a href="https://github.com/iCVTEAM/UVANet/" target="_blank">
+                <p class="link">Code</p>
+              </a>
+            </div>
+            <div class="column"></div>
+            <div class="column"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div style="text-align: center;">
+      <div class="container" style="max-width:850px">
+        <div style="text-align: center;">
+          <img src="assets/UVANet/head.png" class="centerImage">
+        </div>
+      </div>
+      <div class="head_cap">
+        <p style="color:gray;">
+          Framework of UVA-Net.
+        </p>
+      </div>
+    </div>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container" style="max-width: 800px" >
+          <h1 style="">Abstract</h1>
+          <p  style="text-align: justify; font-size: 17px;">
+            Large convolutional neural network models have recently 
+            demonstrated impressive performance on video attention prediction. 
+            Conventionally, these models are with intensive computation and 
+            large memory. To address these issues, we design an extremely 
+            light-weight network with ultrafast speed,named UVA-Net. The 
+            network is constructed based on depthwise convolutions and takes 
+            low-resolution images as input.However, this straight-forward 
+            acceleration method will decrease performance dramatically. 
+            To this end, we propose a coupled knowledge distillation strategy 
+            to augment and train the network effectively. With this strategy, 
+            the model can further automatically discover and emphasize implicit 
+            useful cues contained in the data. Both spatial and temporal knowledge 
+            learned by the high-resolution complex teacher networks also 
+            can be distilled and transferred into the proposed low-resolution 
+            light-weight spatiotemporal network. Experimental results show that 
+            the performance of our model is comparable to 11 state-of-the-art 
+            models in video attention prediction, while it costs only 0.68 MB 
+            memory footprint,runs about 10,106 FPS on GPU and 404 FPS on CPU, which
+            is 206 times faster than previous models.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="hero is-light" style="background-color:#FFFFFF;">
+      <div class="hero-body">
+        <div class="container" style="max-width:800px;margin-bottom:20px;">
+          <h1>
+            Qualitative comparisons
+          </h1>
+        </div>
+        <div class="container" style="max-width:800px">
+          <div style="text-align: center;">
+            <img src="assets/UVANet/comp.png" class="centerImage">
+          </div>
+        </div>
+        <div class="head_cap">
+          <p style="color:gray;">
+             Representative frames of state-of-the-art models on AVS1K. (a) Video frame, (b) Ground truth, (c) HFT, (d) SP, 
+             (e)PNSP, (f) SSD, (g) LDS, (h) eDN, (i) iSEEL, (j) DVA, (k) SalNet, (l) STS, (m) UVA-DVA-32, (n) UVA-DVA-64.
+          </p>
+        </div>
+      </div>
+    </section>
+  <section class="hero" style="padding-top:0px;">
+    <div class="hero-body">
+      <div class="container" style="max-width:800px;">
+  <div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      BibTex Citation
+    </p>
+
+    <a class="card-header-icon button-clipboard" style="border:0px; background: inherit;" data-clipboard-target="#bibtex-info" >
+      <i class="fa fa-copy" height="20px"></i>
+    </a>
+  </header>
+    <div class="card-content">
+<pre style="background-color:inherit;padding: 0px;" id="bibtex-info">@inproceedings{fu2020ultrafast,
+  title={Ultrafast Video Attention Prediction with Coupled Knowledge Distillation.},
+  author={Fu, Kui and Shi, Peipei and Song, Yafei and Ge, Shiming and Lu, Xiangju and Li, Jia},
+  booktitle={AAAI},
+  pages={10802--10809},
+  year={2020}
+}</pre>
+    </div>
+    </section>
+    <script type="text/javascript" src="assets/scripts/clipboard.min.js"></script>
+    <script>
+      new ClipboardJS('.button-clipboard');
+    </script>
+  </body>
+</html>

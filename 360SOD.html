@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>360SOD</title>
+    <link rel="stylesheet" type="text/css" href="assets/scripts/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/scripts/theme.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <section class="hero is-light" style="">
+      <div class="hero-body" style="padding-top: 50px;">
+        <div class="container" style="text-align: center;margin-bottom:5px;">
+          <h1 class="title">
+            Distortion-adaptive Salient Object Detection in
+          </h1>
+          <h1 class="title">
+            360° Omnidirectional Images
+          </h1>
+
+          <div class="author">Jia Li</div>
+          <div class="author">Jinming Su</div>
+          <div class="author">Changqun Xia</div>
+          <div class="author">Yonghong Tian</div>
+          <div class="group">
+            <a href="http://cvteam.net/">CVTEAM</a>
+          </div>
+          <div class="aff">
+            <p><sup>1</sup>State Key Laboratory of Virtual Reality Technology and Systems, SCSE, Beihang University, Beijing, China</p>
+          </div>
+          <div class="con">
+            <p  style="font-size: 24px; margin-top:5px; margin-bottom: 15px;">
+            JSTSP 2020
+            </p>
+          </div>
+          <div class="columns">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column">
+              <a href="https://arxiv.org/abs/1909.04913" target="_blank">
+                <p class="link">Paper</p>
+              </a>
+            </div>
+            <div class="column">
+              <a href="https://github.com/iCVTEAM/360SOD/" target="_blank">
+                <p class="link">Code</p>
+              </a>
+            </div>
+            <div class="column"></div>
+            <div class="column"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div style="text-align: center;">
+      <div class="container" style="max-width:850px">
+        <div style="text-align: center;">
+          <img src="assets/360SOD/head.png" class="centerImage">
+        </div>
+      </div>
+      <div class="head_cap">
+        <p style="color:gray;">
+          The framework of our baseline model.
+        </p>
+      </div>
+    </div>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container" style="max-width: 800px" >
+          <h1 style="">Abstract</h1>
+          <p  style="text-align: justify; font-size: 17px;">
+            Image-based salient object detection (SOD) has been 
+            extensively explored in the past decades. However, SOD on 360° 
+            omnidirectional images is less studied owing to the lack of 
+            datasets with pixel-level annotations. Toward this end, this paper 
+            proposes a 360° image-based SOD dataset that contains 500 
+            high-resolution equirectangular images. We collect the representative 
+            equirectangular images from five mainstream 360° video datasets 
+            and manually annotate all objects and regions over these images 
+            with precise masks with a free-viewpoint way. To the best of our 
+            knowledge, it is the first public available dataset for salient object 
+            detection on 360° scenes. By observing this dataset, we find that 
+            distortion from projection, large-scale complex scene and small 
+            salient objects are the most prominent characteristics. Inspired 
+            by these foundings, this paper proposes a baseline model for 
+            SOD on equirectangular images. In the proposed approach, we 
+            construct a distortion-adaptive module to deal with the distortion 
+            caused by the equirectangular projection. In addition, a 
+            multiscale contextual integration block is introduced to perceive and 
+            distinguish the rich scenes and objects in omnidirectional scenes. 
+            The whole network is organized in a progressively manner with 
+            deep supervision. Experimental results show the proposed baseline 
+            approach outperforms the top-performanced state-of-the-art methods on 360°
+            SOD dataset. Moreover, benchmarking results 
+            of the proposed baseline approach and other methods on 360° 
+            SOD dataset show the proposed dataset is very challenging, which 
+            also validate the usefulness of the proposed dataset and approach 
+            to boost the development of SOD on 360° omnidirectional scenes.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="hero is-light" style="background-color:#FFFFFF;">
+      <div class="hero-body">
+        <div class="container" style="max-width:800px;margin-bottom:20px;">
+          <h1>
+             Representative examples
+          </h1>
+        </div>
+        <div class="container" style="max-width:800px">
+          <div style="text-align: center;">
+            <img src="assets/360SOD/comp.png" class="centerImage">
+          </div>
+        </div>
+      </div>
+    </section>
+  <section class="hero" style="padding-top:0px;">
+    <div class="hero-body">
+      <div class="container" style="max-width:800px;">
+  <div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      BibTex Citation
+    </p>
+
+    <a class="card-header-icon button-clipboard" style="border:0px; background: inherit;" data-clipboard-target="#bibtex-info" >
+      <i class="fa fa-copy" height="20px"></i>
+    </a>
+  </header>
+    <div class="card-content">
+<pre style="background-color:inherit;padding: 0px;" id="bibtex-info">@article{li2019distortion,
+  title={Distortion-Adaptive Salient Object Detection in 360$\^{}$\backslash$circ $ Omnidirectional Images},
+  author={Li, Jia and Su, Jinming and Xia, Changqun and Tian, Yonghong},
+  journal={IEEE Journal of Selected Topics in Signal Processing},
+  volume={14},
+  number={1},
+  pages={38--48},
+  year={2019},
+  publisher={IEEE}
+}</pre>
+    </div>
+    </section>
+    <script type="text/javascript" src="assets/scripts/clipboard.min.js"></script>
+    <script>
+      new ClipboardJS('.button-clipboard');
+    </script>
+  </body>
+</html>
