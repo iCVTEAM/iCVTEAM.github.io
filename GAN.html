@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>GAN</title>
+    <link rel="stylesheet" type="text/css" href="assets/scripts/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/scripts/theme.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <section class="hero is-light" style="">
+      <div class="hero-body" style="padding-top: 50px;">
+        <div class="container" style="text-align: center;margin-bottom:5px;">
+          <h1 class="title">
+            Cross-domain Visual Attention Model Adaption with One-shot GAN
+          </h1>
+
+          <div class="author">Daowei Li<sup>1</sup></div>
+          <div class="author">Kui Fu<sup>1</sup></div>
+          <div class="author">Yifan Zhao<sup>1</sup></div>
+          <div class="author">Long Xu<sup>2</sup></div>
+          <div class="author">Jia Li<sup>1</sup>*</div>
+          <div class="group">
+            <a href="http://cvteam.net/">CVTEAM</a>
+          </div>
+          <div class="aff">
+            <p><sup>1</sup>State Key Laboratory of Virtual Reality Technology and Systems, SCSE, Beihang University</p>
+            <p><sup>2</sup>Key Laboratory of Solar Activity, National Astronomical Observatories, CAS, Beijing, China</p>
+          </div>
+          <div class="con">
+            <p  style="font-size: 24px; margin-top:5px; margin-bottom: 15px;">
+            MIPR 2020
+            </p>
+          </div>
+          <div class="columns">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column">
+              <a href="https://ieeexplore.ieee.org/document/9175553" target="_blank">
+                <p class="link">Paper</p>
+              </a>
+            </div>
+            <div class="column">
+                <p class="link">Code</p>
+            </div>
+            <div class="column"></div>
+            <div class="column"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div style="text-align: center;">
+      <div class="container" style="max-width:850px">
+        <div style="text-align: center;">
+          <img src="assets/GAN/Network architectures.png" class="centerImage">
+        </div>
+      </div>
+      <div class="head_cap">
+        <p style="color:gray;">
+          The network architectures
+        </p>
+      </div>
+    </div>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container" style="max-width: 800px" >
+          <h1 style="">Abstract</h1>
+          <p  style="text-align: justify; font-size: 17px;">
+            The state-of-the-art models for visual attention prediction perform well in common images. But in general, these
+            models have a performance degradation when applied to
+            another domain with conspicuous data distribution differences, such as solar images in this work. To address this issue and adopt these models from the common images to the
+            sun, this paper proposes a new dataset, named VASUN, that
+            records the free-viewing human attention on solar images.
+            Based on this dataset, we propose a new cross-domain model adaption approach, which is a siamese feature extraction
+            network with two discriminators and trained in a one-shot
+            learning manner, to bridge the gaps between the source domain and target domain through the joint distribution space.
+            Finally, we benchmark existing models as well as our work
+            on VASUN and give some analysis about predicting visual attention on the sun. The results show that our method
+            achieves state-of-the-art performance with only one labeled
+            image in the target domain and contributes to the domain
+            adaption task.
+
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="hero is-light" style="background-color:#FFFFFF;">
+      <div class="hero-body">
+        <div class="container" style="max-width:800px;margin-bottom:20px;">
+          <h1>
+            Qualitative Comparison
+          </h1>
+        </div>
+        <div class="container" style="max-width:800px">
+          <div style="text-align: center;">
+            <img src="assets/GAN/Benchmark.png" class="centerImage">
+          </div>
+        </div>
+      </div>
+    </section>
+  <section class="hero" style="padding-top:0px;">
+    <div class="hero-body">
+      <div class="container" style="max-width:800px;">
+  <div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      BibTex Citation
+    </p>
+
+    <a class="card-header-icon button-clipboard" style="border:0px; background: inherit;" data-clipboard-target="#bibtex-info" >
+      <i class="fa fa-copy" height="20px"></i>
+    </a>
+  </header>
+    <div class="card-content">
+<pre style="background-color:inherit;padding: 0px;" id="bibtex-info">@article{licross,
+title={Cross-domain Visual Attention Model Adaption with One-shot GAN},
+author={Li, Daowei and Fu, Kui and Zhao, Yifan and Xu, Long and Li, Jia},
+booktitle={IEEE International Conference on Multimedia Information Processing and Retrieval (MIPR)},
+pages={1--1},
+year={2020}
+}</pre>
+    </div>
+    </section>
+    <script type="text/javascript" src="assets/scripts/clipboard.min.js"></script>
+    <script>
+      new ClipboardJS('.button-clipboard');
+    </script>
+  </body>
+</html>
