@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ADSOI</title>
+    <link rel="stylesheet" type="text/css" href="assets/scripts/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/scripts/theme.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <section class="hero is-light" style="">
+      <div class="hero-body" style="padding-top: 50px;">
+        <div class="container" style="text-align: center;margin-bottom:5px;">
+          <h1 class="title">
+            Attentive Deep Stitching and Quality Assessment for
+          </h1>
+          <h1 class="title">
+            360° Omnidirectional Images
+          </h1>
+
+          <div class="author">Jia Li</div>
+          <div class="author">Yifan Zhao</div>
+          <div class="author">Weihua Ye</div>
+          <div class="author">Kaiwen Yu</div>
+          <div class="author">Shiming Ge</div>
+          <div class="group">
+            <a href="http://cvteam.net/">CVTEAM</a>
+          </div>
+          <div class="aff">
+            <p><sup>1</sup>State Key Laboratory of Virtual Reality Technology and Systems, SCSE, Beihang University, Beijing, China</p>
+          </div>
+          <div class="con">
+            <p  style="font-size: 24px; margin-top:5px; margin-bottom: 15px;">
+            JSTSP 2020
+            </p>
+          </div>
+          <div class="columns">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column">
+              <a href="http://cvteam.net/papers/2020-JSTSP-Attentive%20Deep%20Stitching%20and%20Quality%20Assessment%20for%20360%C2%B0%20Omnidirectional%20Images.pdf" target="_blank">
+                <p class="link">Paper</p>
+              </a>
+            </div>
+            <div class="column">
+              <a href="https://github.com/iCVTEAM/ADSOI/" target="_blank">
+                <p class="link">Code</p>
+              </a>
+            </div>
+            <div class="column"></div>
+            <div class="column"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div style="text-align: center;">
+      <div class="container" style="max-width:850px">
+        <div style="text-align: center;">
+          <img src="assets/ADSOI/head.png" class="centerImage">
+        </div>
+      </div>
+      <div class="head_cap">
+        <p style="color:gray;">
+          Framework of proposed Attentive Deep Stitching (ADS).
+        </p>
+      </div>
+    </div>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container" style="max-width: 800px" >
+          <h1 style="">Abstract</h1>
+          <p  style="text-align: justify; font-size: 17px;">
+            360° omnidirectional images are very helpful in creating 
+            immersive multimedia contents, which enables a huge demand 
+            in their efficient generation and effective assessment. In this paper, 
+            we leverage an attentive idea to meet this demand by addressing two 
+            concerns: how to generate a good omnidirectional image in a fast 
+            and robust way and what is a good omnidirectional image for human. 
+            To this end, we propose an attentive deep stitching approach 
+            to facilitate the efficient generation of omnidirectional images, 
+            which is composed of two modules. The low-resolution deformation 
+            module aims to learn the deformation rules from dual-fisheye to 
+            omnidirectional images with joint implicit and explicit attention 
+            mechanisms, while the high-resolution recurrence module enhances the 
+            resolution of stitching results with the high-resolution guidance in a 
+            recurrent manner. In this way, the stitching approach can efficiently 
+            generate high-resolution omnidirectional images that are highly 
+            consistent with human immersive experiences. Beyond the efficient 
+            generation, we further present an attention-driven omnidirectional 
+            image quality assessment (IQA) method which uses joint evaluation 
+            with both global and local metrics. Especially, the local metric 
+            mainly focuses on the stitching region and attention region that 
+            mostly affect the Mean Opinion Score (MOS), leading to a consistent 
+            evaluation of human perception. To verify the effectiveness of 
+            our proposed assessment and stitching approaches, we construct a 
+            hybrid benchmark evaluation with 7 stitching models and 8 IQA  
+            metrics. Qualitative and quantitative experiments show our stitching 
+            approach generate preferable results with the state-of-the-art 
+            models at a 6× faster speed and the proposed quality assessment 
+            approach surpasses other methods by a large margin and is highly 
+            consistent with human subjective evaluations.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="hero is-light" style="background-color:#FFFFFF;">
+      <div class="hero-body">
+        <div class="container" style="max-width:800px;margin-bottom:20px;">
+          <h1>
+            Benchmark evaluations.
+          </h1>
+        </div>
+        <div class="container" style="max-width:800px">
+          <div style="text-align: center;">
+            <img src="assets/ADSOI/comp.png" class="centerImage">
+          </div>
+        </div>
+      </div>
+    </section>
+  <section class="hero" style="padding-top:0px;">
+    <div class="hero-body">
+      <div class="container" style="max-width:800px;">
+  <div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      BibTex Citation
+    </p>
+
+    <a class="card-header-icon button-clipboard" style="border:0px; background: inherit;" data-clipboard-target="#bibtex-info" >
+      <i class="fa fa-copy" height="20px"></i>
+    </a>
+  </header>
+    <div class="card-content">
+<pre style="background-color:inherit;padding: 0px;" id="bibtex-info">@article{li2019attentive,
+  title={Attentive Deep Stitching and Quality Assessment for 360° Omnidirectional Images},
+  author={Li, Jia and Zhao, Yifan and Ye, Weihua and Yu, Kaiwen and Ge, Shiming},
+  journal={IEEE Journal of Selected Topics in Signal Processing},
+  volume={14},
+  number={1},
+  pages={209--221},
+  year={2019},
+  publisher={IEEE}
+}</pre>
+    </div>
+    </section>
+    <script type="text/javascript" src="assets/scripts/clipboard.min.js"></script>
+    <script>
+      new ClipboardJS('.button-clipboard');
+    </script>
+  </body>
+</html>
