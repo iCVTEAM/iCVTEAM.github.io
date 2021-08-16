@@ -67,21 +67,16 @@
         <div class="container" style="max-width: 800px" >
           <h1 style="">Abstract</h1>
           <p  style="text-align: justify; font-size: 17px;">
-            Given base classes with sufficient labeled samples, the target of
-            few-shot classification is to recognize unlabeled samples of novel
-            classes with only a few labeled samples. Most existing methods only
-            pay attention to the relationship between labeled and unlabeled
-            samples of novel classes, which do not make full use of information
-            within base classes. In this paper, we make two contributions to
-            investigate the few-shot classification problem. First, we report a
-            simple and effective baseline trained on base classes in the way
-            of traditional supervised learning, which can achieve comparable
-            results to the state of the art. Second, based on the baseline, we propose a cooperative bi-path metric for classification, which leverages
-            the correlations between base classes and novel classes to further
-            improve the accuracy. Experiments on two widely used benchmarks
-            show that our method is a simple and effective framework, and
-            a new state of the art is established in the few-shot classification
-            field.
+            Single image dehazing is a crucial and preliminary task for many computer vision applications, making progress with deep learning. 
+            The dehazing task is an ill-posed problem since the haze in the image leads to the loss of information. Thus, there are multiple feasible 
+            solutions for image restoration of a hazy image. Most existing methods learn a deterministic one-to-one mapping between a hazy image and 
+            its ground-truth, which ignores the ill-posedness of the dehazing task. To solve this problem, we propose DehazeFlow, a novel single image 
+            dehazing framework based on conditional normalizing flow. Our method learns the conditional distribution of haze-free images given a hazy 
+            image, enabling the model to sample multiple dehazed results. Furthermore, we propose an attention-based coupling layer to enhance the 
+            expression ability of a single flow step, which converts natural images into latent space and fuses features of paired data. These designs 
+            enable our model to achieve state-of-the-art performance while considering the ill-posedness of the task. We carry out sufficient experiments 
+            on both synthetic datasets and real-world hazy images to illustrate the effectiveness of our method. The extensive experiments indicate 
+            that DehazeFlow surpasses the state-of-the-art methods in terms of PSNR, SSIM, LPIPS, and subjective visual effects.
           </p>
         </div>
       </div>
@@ -95,7 +90,7 @@
         </div>
         <div class="container" style="max-width:800px">
           <div style="text-align: center;">
-            <img src="assets/CBM/experiment.jpg" class="centerImage">
+            <img src="assets/DehazeFlow/metrics.png" class="centerImage">
           </div>
         </div>
       </div>
