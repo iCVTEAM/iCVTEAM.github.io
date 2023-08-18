@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>E<sup>2</sup>NeRF</title>
+    <link rel="stylesheet" type="text/css" href="assets/scripts/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/scripts/theme.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <section class="hero is-light" style="">
+      <div class="hero-body" style="padding-top: 50px;">
+        <div class="container" style="text-align: center;margin-bottom:5px;">
+          <h1 class="title">
+            E<sup>2</sup>NeRF: Event Enhanced Neural Radiance Fields from Blurry Images
+          </h1>
+
+          <div class="author">Yunshan Qi<sup>1</sup></div>
+          <div class="author">Lin Zhu<sup>2</sup></div>
+          <div class="author">Yu Zhang<sup>3</sup></div>
+          <div class="author">Jia Li<sup>* 1</sup></div>
+          <div class="group">
+            <a href="http://cvteam.net/">CVTEAM</a>
+          </div>
+          <div class="aff">
+            <p><sup>1</sup>Beihang University, Beijing, China</p>
+            <p><sup>2</sup>Beijing Institute of Technology, Beijing, China</p>
+            <p><sup>3</sup>Apple Inc., Beijing, China</p>
+          </div>
+          <div class="con">
+            <p  style="font-size: 24px; margin-top:5px; margin-bottom: 15px;">
+            International Conference on Computer Vision (ICCV) 2023
+            </p>
+          </div>
+          <div class="columns">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column">
+              <a href="https://github.com/iCVTEAM/E2NeRF" target="_blank">
+                <p class="link"  style="font-size: 24px; margin-top:5px; margin-bottom: 15px;">[Paper]</p>
+              </a>
+            </div>
+            <div class="column">
+              <a href="https://github.com/iCVTEAM/E2NeRF" target="_blank">
+                <p class="link"  style="font-size: 24px; margin-top:5px; margin-bottom: 15px;">[Code]</p>
+              </a>
+            </div>
+            <div class="column"></div>
+            <div class="column"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div style="text-align: center;">
+      <div class="container" style="max-width:850px">
+        <div style="text-align: center;">
+          <img src="assets/E2NeRF/method.png" class="centerImage">
+        </div>
+      </div>
+      <div class="head_cap">
+        <p style="color:gray;">
+          The overall display of E<sup>2</sup>NeRF
+        </p>
+      </div>
+    </div>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container" style="max-width: 800px" >
+          <h1 style="">Abstract</h1>
+          <p  style="text-align: justify; font-size: 17px;">
+            Neural Radiance Field (NeRF) achieves impressive rendering performance by learning volumetric 3D representation from several images of different views.
+            However, it is difficult to reconstruct a sharp NeRF from blurry input as often occurred in the wild.
+            To solve this problem, we propose a novel Event-enhanced NeRF (ENeRF) by utilizing the combination data of a bio-inspired event camera and a standard RGB camera.
+            To effectively introduce event stream into the learning process of neural volumetric representation, we propose a blur rendering loss and an event rendering loss, which guide the network via modelling real blur process and event generation process, respectively.
+            Moreover, a camera pose estimation framework for real-world data is built by the guidance of event stream to generalize the method to practical applications.
+            In contrast to previous image-based or event-based NeRF, our framework effectively utilizes the internal relationship between events and images.
+            As a result, ENeRF not only achieves image deblurring, but also achieves high-quality novel view image generation.
+            Extensive experiments on both synthetic data and real-world data demonstrate that ENeRF can effectively learn a sharp NeRF and reconstruct high-quality images, especially in complex and low light scenes.
+            Our code and dataset will be available later.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="hero is-light" style="background-color:#FFFFFF;">
+      <div class="hero-body">
+        <div class="container" style="max-width:800px;margin-bottom:20px;">
+          <h1>
+            Qualitative Comparison
+          </h1>
+        </div>
+        <div class="container" style="max-width:800px">
+          <div style="text-align: center;">
+            <img src="assets/PFSNet/comp.png" class="centerImage">
+          </div>
+        </div>
+      </div>
+    </section>
+  <section class="hero" style="padding-top:0px;">
+    <div class="hero-body">
+      <div class="container" style="max-width:800px;">
+  <div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      BibTex Citation
+    </p>
+
+    <a class="card-header-icon button-clipboard" style="border:0px; background: inherit;" data-clipboard-target="#bibtex-info" >
+      <i class="fa fa-copy" height="20px"></i>
+    </a>
+  </header>
+    <div class="card-content">
+<pre style="background-color:inherit;padding: 0px;" id="bibtex-info">@article{Ma_Xia_Li_2021,
+  title={Pyramidal Feature Shrinking for Salient Object Detection},
+  volume={35},
+  url={https://ojs.aaai.org/index.php/AAAI/article/view/16331},
+  number={3},
+  journal={Proceedings of the AAAI Conference on Artificial Intelligence},
+  author={Ma, Mingcan and Xia, Changqun and Li, Jia},
+  year={2021},
+  month={May},
+  pages={2311-2318}
+}</pre>
+    </div>
+    </section>
+    <script type="text/javascript" src="assets/scripts/clipboard.min.js"></script>
+    <script>
+      new ClipboardJS('.button-clipboard');
+    </script>
+  </body>
+</html>
