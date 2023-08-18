@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>E<sup>2</sup>NeRF</title>
+    <title>PFSNet</title>
     <link rel="stylesheet" type="text/css" href="assets/scripts/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="assets/scripts/theme.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,37 +12,35 @@
       <div class="hero-body" style="padding-top: 50px;">
         <div class="container" style="text-align: center;margin-bottom:5px;">
           <h1 class="title">
-            E<sup>2</sup>NeRF: Event Enhanced Neural Radiance Fields from Blurry Images
+            Pyramidal Feature Shrinking for Salient Object Detection
           </h1>
 
-          <div class="author">Yunshan Qi<sup>1</sup></div>
-          <div class="author">Lin Zhu<sup>2</sup></div>
-          <div class="author">Yu Zhang<sup>3</sup></div>
-          <div class="author">Jia Li<sup>* 1</sup></div>
+          <div class="author">Mingcan Ma<sup>1,2</sup></div>
+          <div class="author">Changqun Xia<sup>2</sup></div>
+          <div class="author">Jia Li<sup>1,2</sup></div>
           <div class="group">
             <a href="http://cvteam.net/">CVTEAM</a>
           </div>
           <div class="aff">
-            <p><sup>1</sup>Beihang University, Beijing, China</p>
-            <p><sup>2</sup>Beijing Institute of Technology, Beijing, China</p>
-            <p><sup>3</sup>Apple Inc., Beijing, China</p>
+            <p><sup>1</sup>State Key Laboratory of Virtual Reality Technology and Systems, SCSE, Beihang University, Beijing, China</p>
+            <p><sup>2</sup>Pengcheng Laboratory, Shenzhen, China</p>
           </div>
           <div class="con">
             <p  style="font-size: 24px; margin-top:5px; margin-bottom: 15px;">
-            International Conference on Computer Vision (ICCV) 2023
+            AAAI 2021
             </p>
           </div>
           <div class="columns">
             <div class="column"></div>
             <div class="column"></div>
             <div class="column">
-              <a href="https://github.com/iCVTEAM/E2NeRF" target="_blank">
-                <p class="link"  style="font-size: 24px; margin-top:5px; margin-bottom: 15px;">[Paper]</p>
+              <a href="https://ojs.aaai.org/index.php/AAAI/article/view/16331" target="_blank">
+                <p class="link">Paper</p>
               </a>
             </div>
             <div class="column">
-              <a href="https://github.com/iCVTEAM/E2NeRF" target="_blank">
-                <p class="link"  style="font-size: 24px; margin-top:5px; margin-bottom: 15px;">[Code]</p>
+              <a href="https://github.com/iCVTEAM/PFSNet/" target="_blank">
+                <p class="link">Code</p>
               </a>
             </div>
             <div class="column"></div>
@@ -54,12 +52,12 @@
     <div style="text-align: center;">
       <div class="container" style="max-width:850px">
         <div style="text-align: center;">
-          <img src="assets/E2NeRF/method.png" class="centerImage">
+          <img src="assets/PFSNet/head.png" class="centerImage">
         </div>
       </div>
       <div class="head_cap">
         <p style="color:gray;">
-          The overall display of E<sup>2</sup>NeRF
+          The overall display of PFSNet
         </p>
       </div>
     </div>
@@ -68,15 +66,33 @@
         <div class="container" style="max-width: 800px" >
           <h1 style="">Abstract</h1>
           <p  style="text-align: justify; font-size: 17px;">
-            Neural Radiance Field (NeRF) achieves impressive rendering performance by learning volumetric 3D representation from several images of different views.
-            However, it is difficult to reconstruct a sharp NeRF from blurry input as often occurred in the wild.
-            To solve this problem, we propose a novel Event-enhanced NeRF (ENeRF) by utilizing the combination data of a bio-inspired event camera and a standard RGB camera.
-            To effectively introduce event stream into the learning process of neural volumetric representation, we propose a blur rendering loss and an event rendering loss, which guide the network via modelling real blur process and event generation process, respectively.
-            Moreover, a camera pose estimation framework for real-world data is built by the guidance of event stream to generalize the method to practical applications.
-            In contrast to previous image-based or event-based NeRF, our framework effectively utilizes the internal relationship between events and images.
-            As a result, ENeRF not only achieves image deblurring, but also achieves high-quality novel view image generation.
-            Extensive experiments on both synthetic data and real-world data demonstrate that ENeRF can effectively learn a sharp NeRF and reconstruct high-quality images, especially in complex and low light scenes.
-            Our code and dataset will be available later.
+            Recently, we have witnessed the great progress of salient object
+            detection (SOD), which benefits from the effectiveness
+            of various feature aggregation strategies. However, existing
+            methods usually aggregate the low-level features containing
+            details and the high-level features containing semantics over
+            a large span, which introduces noise into the aggregated features
+            and generates inaccurate saliency maps. In this paper,
+            we propose a pyramidal feature shrinking network (PFSNet),
+            which aims to aggregate adjacent feature nodes in pairs with
+            layer-by-layer shrinkage, so that the aggregated features fuse
+            effective details and semantics and discard interference information.
+            Specifically, a pyramidal shrinking decoder (PSD) is
+            proposed to aggregate adjacent features hierarchically in an
+            asymptotic manner. Unlike other methods that aggregate features
+            with significantly different information, this method only
+            focuses on adjacent feature nodes in each layer and shrinks
+            them to a final unique feature node. Besides, we propose
+            an adjacent fusion module (AFM) to perform mutual spatial
+            enhancement between the adjacent features to dynamically
+            weight the features and adaptively fuse the appropriate information.
+            Besides, a scale-aware enrichment module (SEM)
+            based on the features extracted from the backbone is utilized
+            to obtain rich scale information and generate diverse initial
+            features with dilated convolutions. Extensive quantitative and
+            qualitative experiments demonstrate that the proposed intuitive
+            framework outperforms 14 state-of-the-art approaches
+            on 5 public datasets.
           </p>
         </div>
       </div>
