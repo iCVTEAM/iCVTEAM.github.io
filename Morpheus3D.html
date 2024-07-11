@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Single Image to Textured 3D Object Generation in Frequency Domain: From Theory to Pipeline.">
+  <!-- <meta name="keywords" content="Nerfies, D-NeRF, NeRF"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Single Image to Textured 3D Object Generation in Frequency Domain: From Theory to Pipeline</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/Morpheus3D/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/Morpheus3D/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./assets/Morpheus3D/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./assets/Morpheus3D/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./assets/Morpheus3D/css/index.css">
+  <!-- <link rel="icon" href="./assets/Morpheus3D/images/favicon.svg"> -->
+  <link rel="icon" href="./assets/Morpheus3D/images/teddy.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./assets/Morpheus3D/js/fontawesome.all.min.js"></script>
+  <script src="./assets/Morpheus3D/js/bulma-carousel.min.js"></script>
+  <script src="./assets/Morpheus3D/js/bulma-slider.min.js"></script>
+  <script src="./assets/Morpheus3D/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Single Image to Textured 3D Object Generation in Frequency Domain: From Theory to Pipeline</h1>
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+            </span>
+          </div> -->
+
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Washington,</span>
+            <span class="author-block"><sup>2</sup>Google Research</span>
+          </div> -->
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Anonymous</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <!-- <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data (Coming Soon)</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./assets/Morpheus3D/videos/comp_others/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Morpheus3D</span> reconstruct high-quality 3D object from any single unposed image in the wild with effectively suppressing the unrealistic geometry, lacking high-frequency and color deviation problem.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./assets/Morpheus3D/videos/comp_others/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./assets/Morpheus3D/videos/comp_others/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./assets/Morpheus3D/videos/comp_others/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./assets/Morpheus3D/videos/comp_others/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./assets/Morpheus3D/videos/comp_others/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./assets/Morpheus3D/videos/comp_others/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./assets/Morpheus3D/videos/comp_others/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./assets/Morpheus3D/videos/comp_others/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          Single-view 3D reconstruction, also known as image-to-3D, is a persistently challenging task due to the extreme lack of information. Recently, diffusion models pre-trained on large-scale datasets served as 2D priors are used to solve the ill-posed task but suffer from color deviation and view inconsistency, which can be curbed by using diffusion models fine-tuned with 3D annotated data served as 3D priors. However, 3D priors lack high-frequency details, which cannot be solved by direct complementation with 2D priors in spatial domain for introducing erroneous low-frequency 2D prior guidance. In this paper, we revisit the characteristics of different diffusion priors from the frequency perspective. Based on our observations, we theoretically present a unified framework of hybrid optimization using multiple diffusion priors in frequency domain. Under this framework, we further propose Morpheus3D, a pipeline of 3D object generation from any single unposed image in the wild. Morpheus3D enhances 3D prior with high-pass image-prompt 2D prior guidance to reconstruct high-quality 3D objects while effectively suppressing view inconsistency, low-frequency color deviation, and high-frequency lacking problems. Both quantitative and qualitative experiments on the public and our collected datasets with complex textures show that our method exhibits significant improvements in generation quality.
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Generated Textured Meshes</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Generated Textured Meshes</h2>
+        <video id="matting-video" controls playsinline height="100%">
+          <source src="./assets/Morpheus3D/videos/comp_others/matting.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div> -->
+    
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Visual Effects</h2>
+          <p>
+            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+            would be impossible without nerfies since it would require going through a wall.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./assets/Morpheus3D/videos/comp_others/dollyzoom-stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column">
+        <h2 class="title is-3">Matting</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              As a byproduct of our method, we can also solve the matting problem by ignoring
+              samples that fall outside of a bounding box during rendering.
+            </p>
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./assets/Morpheus3D/videos/comp_others/matting.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Qualitive Results</h2>
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Comparison with other methods</h3>
+        <div class="content has-text-justified">
+          <p>
+            Morpheus3D can generate photo-realistic 3D objects from any single unposed image. We compare the generated results of Morpheus3D with other competitive methods.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <!-- <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+            <source src="./assets/Morpheus3D/videos/comp_others/grapes_0.mp4"
+                    type="video/mp4">
+          </video> -->
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+            <source src="./assets/Morpheus3D/videos/comp_others/bird_1.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+            <source src="./assets/Morpheus3D/videos/comp_others/teddy_0.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+            <source src="./assets/Morpheus3D/videos/comp_others/cat_statue.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+            <source src="./assets/Morpheus3D/videos/comp_others/fish_real_nemo.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+            <source src="./assets/Morpheus3D/videos/comp_others/bird_3.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+            <source src="./assets/Morpheus3D/videos/comp_others/frog_0.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+            <source src="./assets/Morpheus3D/videos/comp_others/statue_2.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+            <source src="./assets/Morpheus3D/videos/comp_others/statue_3.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+            <source src="./assets/Morpheus3D/videos/comp_others/stone_dragon_statue.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <!--/ Re-rendering. -->
+
+        <h3 class="title is-4">Ablation of high-passing 2D prior guidance</h3>
+        <div class="content has-text-justified">
+          <p>
+            Using full-pass 2D prior guidance in spatial domain without high-passing shows heavier color deviation, which indicates the significance of optimization in frequency domain. <b>Note: The color deviation is concentrated on the back and side views.</b>
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <p>Reference</p>
+            <img src="./assets/Morpheus3D/ablation/high-passing/bird.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-high0">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-high0"
+                   step="1" min="0" max="100" value="50" type="range">
+          </div>
+        </div>
+        <br/>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <p>Reference</p>
+            <img src="./assets/Morpheus3D/ablation/high-passing/cat_statue.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-high1">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-high1"
+                   step="1" min="0" max="100" value="50" type="range">
+          </div>
+        </div>
+        <br/>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <p>Reference</p>
+            <img src="./assets/Morpheus3D/ablation/high-passing/teddy.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-high2">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-high2"
+                   step="1" min="0" max="100" value="50" type="range">
+          </div>
+        </div>
+        <br/>
+
+        <h3 class="title is-4">Ablation of fine-tuning 2D prior</h3>
+        <div class="content has-text-justified">
+          <p>
+            Boosting high-frequency details using high-pass 2D prior guidance with fine-tuning 2D prior. <b>Note: The high-frequency lacking is concentrated on the back and side views.</b>
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <p>Reference</p>
+            <img src="./assets/Morpheus3D/ablation/fine-tuning/grapes.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-fine0">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-fine0"
+                   step="1" min="0" max="100" value="50" type="range">
+          </div>
+        </div>
+        <br/>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <p>Reference</p>
+            <img src="./assets/Morpheus3D/ablation/fine-tuning/statue.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-fine1">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-fine1"
+                   step="1" min="0" max="100" value="50" type="range">
+          </div>
+        </div>
+        <br/>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <p>Reference</p>
+            <img src="./assets/Morpheus3D/ablation/fine-tuning/wolf_statue.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-fine2">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-fine2"
+                   step="1" min="0" max="100" value="50" type="range">
+          </div>
+        </div>
+        <br/>
+
+        
+        
+
+        <!-- <h2 class="title is-3">Quantitative Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            Results of quantitative comparisons with other methods are shown in Table 1 of the submitted main manuscript.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./assets/Morpheus3D/images/tab1.png"
+                  alt="Quantitative comparison in Table 1 of the submitted main manuscript."
+                  width="100%"/>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Results of the ablation of high-passing 2D prior guidance are shown in Figure 8 of the submitted main manuscript.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./assets/Morpheus3D/images/fig8.png"
+                    alt="Ablation of high-passing 2D prior guidance in Figure 8 of the submitted main manuscript."
+                    width="100%"/>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Results of the ablation of fine-tuning 2D prior are shown in Figure 12 of the submitted main manuscript.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./assets/Morpheus3D/images/fig12.png"
+                    alt="Ablation of fine-tuning 2D prior in Figure 12 of the submitted main manuscript."
+                    width="100%"/>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Comparisons of training time with other methods are shown in Figure F2 of the supplementary material.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./assets/Morpheus3D/images/figf2.png"
+                  alt="Quantitative comparison of training time in Figure F2 of the supplementary material."
+                  width="50%"/>
+        </div> -->
+        
+        <h2 class="title is-3">Generated Textured Meshes of Morpheus3D</h2>
+        <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+            <source src="./assets/Morpheus3D/videos/textured_meshes/teddy_0.mp4"
+                    type="video/mp4">
+        </video>
+        <video id="replay-video"
+                controls
+                muted
+                preload
+                playsinline
+                width="100%">
+          <source src="./assets/Morpheus3D/videos/textured_meshes/bird_3.mp4"
+                  type="video/mp4">
+        </video>
+        <video id="replay-video"
+                controls
+                muted
+                preload
+                playsinline
+                width="100%">
+          <source src="./assets/Morpheus3D/videos/textured_meshes/cat_0.mp4"
+                  type="video/mp4">
+        </video>
+        <video id="replay-video"
+                controls
+                muted
+                preload
+                playsinline
+                width="100%">
+          <source src="./assets/Morpheus3D/videos/textured_meshes/fish_real_nemo.mp4"
+                  type="video/mp4">
+        </video>
+        <video id="replay-video"
+                controls
+                muted
+                preload
+                playsinline
+                width="100%">
+          <source src="./assets/Morpheus3D/videos/textured_meshes/milk_0.mp4"
+                  type="video/mp4">
+        </video>
+        <video id="replay-video"
+                controls
+                muted
+                preload
+                playsinline
+                width="100%">
+          <source src="./assets/Morpheus3D/videos/textured_meshes/squirrel_0.mp4"
+                  type="video/mp4">
+        </video>
+        <video id="replay-video"
+                controls
+                muted
+                preload
+                playsinline
+                width="100%">
+          <source src="./assets/Morpheus3D/videos/textured_meshes/mushroom_0.mp4"
+                  type="video/mp4">
+        </video>
+        <video id="replay-video"
+                controls
+                muted
+                preload
+                playsinline
+                width="100%">
+          <source src="./assets/Morpheus3D/videos/textured_meshes/statue_1.mp4"
+                  type="video/mp4">
+        </video>
+        <video id="replay-video"
+                controls
+                muted
+                preload
+                playsinline
+                width="100%">
+          <source src="./assets/Morpheus3D/videos/textured_meshes/bird_1.mp4"
+                  type="video/mp4">
+        </video>
+        <video id="replay-video"
+                controls
+                muted
+                preload
+                playsinline
+                width="100%">
+          <source src="./assets/Morpheus3D/videos/textured_meshes/cat_statue.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+
+    <!-- Concurrent Work. -->
+    <!-- <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            There's a lot of excellent work related to Morpheus3D.
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/2209.14988">DreamFusion: Text-to-3D using 2D Diffusion</a>
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/2211.16431">NeuralLift-360: Lifting An In-the-wild 2D Photo to A 3D Object with 360° Views</a>
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/2302.10663">RealFusion: 360° Reconstruction of Any Object from a Single Image</a>
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/2306.17843">Magic123: One Image to High-Quality 3D Object Generation Using Both 2D and 3D Diffusion Priors</a>
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/2303.13873">Fantasia3D: Disentangling Geometry and Appearance for High-quality Text-to-3D Content Creation</a>
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/2305.16213">ProlificDreamer: High-Fidelity and Diverse Text-to-3D Generation with Variational Score Distillation</a>
+          </p>
+          <p>
+            <a href="https://github.com/threestudio-project/threestudio">Threestudio: A Unified Framework for 3D Content Generation</a>
+          </p>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <!-- <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./assets/Morpheus3D/videos/comp_others/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          This website is constructed with the template provided by <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. We are grateful for their template.
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
