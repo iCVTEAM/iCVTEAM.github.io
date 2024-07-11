@@ -1,6 +1,6 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
-// var INTERP_BASE = "./static/interpolation/stacked";
+// var INTERP_BASE = "./assets/Morpheus3D/interpolation/stacked";
 // var NUM_INTERP_FRAMES = 240;
 
 // var interp_images = [];
@@ -22,7 +22,7 @@ window.HELP_IMPROVE_VIDEOJS = false;
 
 //////
 
-var INTERP_BASE_FINE_0 = "./static/ablation/fine-tuning/grapes";
+var INTERP_BASE_FINE_0 = "./assets/Morpheus3D/ablation/fine-tuning/grapes";
 var NUM_INTERP_FRAMES_FINE_0 = 100;
 
 var interp_images_FINE_0 = [];
@@ -41,7 +41,7 @@ function setInterpolationImageFine0(i) {
   $('#interpolation-image-wrapper-fine0').empty().append(image);
 }
 
-var INTERP_BASE_FINE_1 = "./static/ablation/fine-tuning/statue";
+var INTERP_BASE_FINE_1 = "./assets/Morpheus3D/ablation/fine-tuning/statue";
 var NUM_INTERP_FRAMES_FINE_1 = 100;
 
 var interp_images_FINE_1 = [];
@@ -60,7 +60,7 @@ function setInterpolationImageFine1(i) {
   $('#interpolation-image-wrapper-fine1').empty().append(image);
 }
 
-var INTERP_BASE_FINE_2 = "./static/ablation/fine-tuning/wolf_statue";
+var INTERP_BASE_FINE_2 = "./assets/Morpheus3D/ablation/fine-tuning/wolf_statue";
 var NUM_INTERP_FRAMES_FINE_2 = 100;
 
 var interp_images_FINE_2 = [];
@@ -83,7 +83,7 @@ function setInterpolationImageFine2(i) {
 
 //////
 
-var INTERP_BASE_HIGH_0 = "./static/ablation/high-passing/bird";
+var INTERP_BASE_HIGH_0 = "./assets/Morpheus3D/ablation/high-passing/bird";
 var NUM_INTERP_FRAMES_HIGH_0 = 100;
 
 var interp_images_HIGH_0 = [];
@@ -102,7 +102,7 @@ function setInterpolationImageHigh0(i) {
   $('#interpolation-image-wrapper-high0').empty().append(image);
 }
 
-var INTERP_BASE_HIGH_1 = "./static/ablation/high-passing/cat_statue";
+var INTERP_BASE_HIGH_1 = "./assets/Morpheus3D/ablation/high-passing/cat_statue";
 var NUM_INTERP_FRAMES_HIGH_1 = 100;
 
 var interp_images_HIGH_1 = [];
@@ -121,7 +121,7 @@ function setInterpolationImageHigh1(i) {
   $('#interpolation-image-wrapper-high1').empty().append(image);
 }
 
-var INTERP_BASE_HIGH_2 = "./static/ablation/high-passing/teddy";
+var INTERP_BASE_HIGH_2 = "./assets/Morpheus3D/ablation/high-passing/teddy";
 var NUM_INTERP_FRAMES_HIGH_2 = 100;
 
 var interp_images_HIGH_2 = [];
