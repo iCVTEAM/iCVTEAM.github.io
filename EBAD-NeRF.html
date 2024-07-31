@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>EBAD-NeRF</title>
+    <link rel="stylesheet" type="text/css" href="assets/scripts/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/scripts/theme.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <section class="hero is-light" style="">
+      <div class="hero-body" style="padding-top: 50px;">
+        <div class="container" style="text-align: center;margin-bottom:5px;">
+
+          <h1 class="title">
+            Deblurring Neural Radiance Fields with Event-driven Bundle Adjustment
+          </h1>
+
+          <div class="author">
+            <p  style="font-size: 22px">
+              Yunshan Qi<sup>1</sup> &nbsp&nbsp&nbsp&nbsp&nbsp Lin Zhu<sup>2 *</sup> &nbsp&nbsp&nbsp&nbsp&nbsp Yifan Zhao<sup>1</sup> &nbsp&nbsp&nbsp&nbsp&nbsp Nan Bao<sup>1</sup> &nbsp&nbsp&nbsp&nbsp&nbsp Jia Li<sup>1 *</sup>
+            </p>
+          </div>
+          
+          <div class="aff">
+            <p style="font-size: 20px"><sup>1</sup>Beihang University &nbsp&nbsp <sup>2</sup>Beijing Institute of Technology &nbsp&nbsp
+            <p> </p>
+          </div>
+
+          <div class="group">
+            <p style="font-size: 22px">
+              <a href="http://cvteam.net/"><sup>*</sup>CVTEAM</a>
+            </p>
+          </div>
+
+          <div class="con">
+            <h1 style="text-align: center;">Accepted by 32nd ACM International Conference on Multimedia (ACM MM 2024)</h1>
+          </div>
+
+          <div class="columns">
+            <div class="column"></div>
+            <div class="column"></div>
+
+            <div class="column">
+              <a href="https://arxiv.org/abs/2406.14360" target="_blank">
+                <p class="link"  style="font-size: 24px; margin-top:5px; margin-bottom: 15px;">[Paper]</p>
+              </a>
+            </div>
+
+            <div class="column"></div>
+
+            <div class="column">
+              <a href="https://github.com/iCVTEAM/EBAD-NeRF" target="_blank">
+                <p class="link"  style="font-size: 24px; margin-top:5px; margin-bottom: 15px;">[Code]</p>
+              </a>
+            </div>
+
+            <div class="column"></div>
+
+            <div class="column">
+              <a href="https://github.com/iCVTEAM/EBAD-NeRF" target="_blank">
+                <p class="link"  style="font-size: 24px; margin-top:5px; margin-bottom: 15px;">[Dataset]</p>
+              </a>
+            </div>
+
+            <div class="column"></div>
+            <div class="column"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div style="text-align: center;">
+      <div class="head_cap">
+        <h1 style="text-align: center;">Framework</h1>
+      </div>
+
+      <div class="container" style="max-width:850px">
+        <div style="text-align: center;">
+          <img src="./assets/EBAD-NeRF/method.png" class="centerImage">
+        </div>
+      </div>
+
+    </div>
+
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container" style="max-width: 800px" >
+          <h1 style="text-align: center;">Abstract</h1>
+          <p  style="text-align: justify; font-size: 16px;">
+            Neural Radiance Fields (NeRF) achieves impressive 3D representation learning and novel view synthesis results with high-quality multi-view images as input.
+            However, motion blur in images often occurs in low-light and high-speed motion scenes, which significantly degrades the reconstruction quality of NeRF.
+            Previous deblurring NeRF methods struggle to estimate pose and lighting changes during the exposure time, making them unable to accurately model the motion blur.
+            The bio-inspired event camera measuring intensity changes with high temporal resolution makes up this information deficiency.
+            In this paper, we propose Event-driven Bundle Adjustment for Deblurring Neural Radiance Fields (EBAD-NeRF) to jointly optimize the learnable poses and NeRF parameters by leveraging the hybrid event-RGB data.
+            An intensity-change-metric event loss and a photo-metric blur loss are introduced to strengthen the explicit modeling of camera motion blur.
+            Experiments on both synthetic and real-captured data demonstrate that EBAD-NeRF can obtain accurate camera trajectory during the exposure time and learn a sharper 3D representations compared to prior works.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div style="text-align: center;">
+      <div class="head_cap">
+        <h1 style="text-align: center;">Qualitative Results on Real Data</h1>
+      </div>
+      <div class="container" style="max-width:850px">
+        <div style="text-align: center;">
+          <img src="./assets/EBAD-NeRF/gif1.gif" class="centerImage">
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center;">
+      <div class="head_cap">
+        <p style="font-size: 24px">
+          <h1 style="text-align: center;">Qualitative Results on Synthetic Data</h1>
+        </p>
+      </div>
+      <div class="container" style="max-width:850px">
+        <div style="text-align: center;">
+          <img src="./assets/EBAD-NeRF/gif2.gif" class="centerImage">
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center;">
+      <div class="container" style="max-width:850px">
+        <div style="text-align: center;">
+          <img src="./assets/EBAD-NeRF/gif3.gif" class="centerImage">
+        </div>
+      </div>
+    </div>
+
+    
+
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container" style="max-width: 800px" >
+          <h1 style="text-align: center;">Supplementary Video</h1>
+          <iframe width="800" height="450" src="https://www.youtube.com/embed/irCtKi-OO8g?si=lDrXRNM4QGxQ4VPE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+
+   
+
+
+
+  <section class="hero" style="padding-top:0px;">
+    <div class="hero-body">
+      <div class="container" style="max-width:800px;">
+  <div class="card">
+  <!--header class="card-header">
+    <p class="card-header-title">
+      BibTex Citation
+    </p>
+
+    <a class="card-header-icon button-clipboard" style="border:0px; background: inherit;" data-clipboard-target="#bibtex-info" >
+      <i class="fa fa-copy" height="20px"></i>
+    </a>
+  </header>
+    <div class="card-content">
+<pre style="background-color:inherit;padding: 0px;" id="bibtex-info">@article{Ma_Xia_Li_2021,
+  title={Pyramidal Feature Shrinking for Salient Object Detection},
+  volume={35},
+  url={https://ojs.aaai.org/index.php/AAAI/article/view/16331},
+  number={3},
+  journal={Proceedings of the AAAI Conference on Artificial Intelligence},
+  author={Ma, Mingcan and Xia, Changqun and Li, Jia},
+  year={2021},
+  month={May},
+  pages={2311-2318}
+}</pre-->
+  </div>
+  </section>
+    <script type="text/javascript" src="assets/scripts/clipboard.min.js"></script>
+    <script>
+      new ClipboardJS('.button-clipboard');
+    </script>
+  </body>
+</html>
