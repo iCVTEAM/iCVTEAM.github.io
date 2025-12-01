@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="ChronosObserver: Taming 4D World with Hyperspace Diffusion Sampling.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChronosObserver: Taming 4D World with Hyperspace Diffusion Sampling</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/ChronosObserver/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/ChronosObserver/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./assets/ChronosObserver/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./assets/ChronosObserver/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./assets/ChronosObserver/css/index.css">
+  <link rel="icon" href="./assets/ChronosObserver/images/icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./assets/ChronosObserver/js/fontawesome.all.min.js"></script>
+  <script src="./assets/ChronosObserver/js/bulma-carousel.min.js"></script>
+  <script src="./assets/ChronosObserver/js/bulma-slider.min.js"></script>
+  <script src="./assets/ChronosObserver/js/index.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
+              <img src="./assets/ChronosObserver/images/logo.png" alt="Logo" style="height: 150px;">
+              <h1 class="title is-1 publication-title" style="font-size: 28px; font-weight: 700; margin: 0;">
+                Taming 4D World with Hyperspace Diffusion Sampling
+              </h1>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Qisen Wang, Yifan Zhao*, Peisen Shen, Jialu Li, Jia Li*</span>
+            </div>
+
+            <div class="publication-links">
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            Although prevailing camera-controlled video generation models can produce cinematic results, lifting them
+            directly to
+            the generation of 3D-consistent and high-fidelity time-synchronized multi-view videos remains challenging,
+            which is a
+            pivotal capability for taming 4D worlds. Some works resort to data augmentation or test-time optimization,
+            but these
+            strategies are constrained by limited model generalization and scalability issues. To this end, we propose
+            ChronosObserver, a training-free method including World State Hyperspace to represent the spatiotemporal
+            constraints of
+            a 4D world scene, and Hyperspace Guided Sampling to synchronize the diffusion sampling trajectories of
+            multiple views
+            using the hyperspace. Experimental results demonstrate that our method achieves high-fidelity and
+            3D-consistent
+            time-synchronized multi-view videos generation without training or fine-tuning for diffusion models.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">ChronosObserver</h2>
+          <div class="content has-text-centered">
+            <div class="content has-text-justified">
+              Videos have been compressed.
+            </div>
+            <video id="replay-video" controls muted preload playsinline width="100%">
+              <source src="./assets/ChronosObserver/videos/ChronosObserver/video.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <h2 class="title is-3">Qualitive Comparisons</h2>
+
+          <h3 class="title is-4">Qualitive Comparisons with other methods</h3>
+          <div class="content has-text-centered">
+            
+            <div class="content has-text-justified">
+              Videos have been compressed.
+            </div>
+
+            <video id="replay-video" controls muted preload playsinline width="100%">
+              <source src="./assets/ChronosObserver/videos/comp_others/example1.mp4" type="video/mp4">
+            </video>
+
+
+            <video id="replay-video" controls muted preload playsinline width="100%">
+              <source src="./assets/ChronosObserver/videos/comp_others/example2.mp4" type="video/mp4">
+            </video>
+
+            <video id="replay-video" controls muted preload playsinline width="100%">
+              <source src="./assets/ChronosObserver/videos/comp_others/example3.mp4" type="video/mp4">
+            </video>
+
+            <video id="replay-video" controls muted preload playsinline width="100%">
+              <source src="./assets/ChronosObserver/videos/comp_others/example4.mp4" type="video/mp4">
+            </video>
+
+
+          </div>
+
+          <h3 class="title is-4">Ablations</h3>
+          <div class="columns is-vcentered interpolation-panel">
+            <div class="column interpolation-video-column">
+              <div id="interpolation-image-wrapper-ablation-1">
+                Loading...
+              </div>
+              <input class="slider is-fullwidth is-large is-info" id="interpolation-slider-ablation-1" step="1" min="0"
+                max="49" value="25" type="range">
+            </div>
+          </div>
+          <br />
+
+          <div class="columns is-vcentered interpolation-panel">
+            <div class="column interpolation-video-column">
+              <div id="interpolation-image-wrapper-ablation-2">
+                Loading...
+              </div>
+              <input class="slider is-fullwidth is-large is-info" id="interpolation-slider-ablation-2" step="1" min="0"
+                max="49" value="25" type="range">
+            </div>
+          </div>
+          <br />
+
+          <div class="columns is-vcentered interpolation-panel">
+            <div class="column interpolation-video-column">
+              <div id="interpolation-image-wrapper-ablation-3">
+                Loading...
+              </div>
+              <input class="slider is-fullwidth is-large is-info" id="interpolation-slider-ablation-3" step="1" min="0"
+                max="49" value="25" type="range">
+            </div>
+          </div>
+          <br />
+
+
+
+
+          <h2 class="title is-3">More Visualization Results</h2>
+          <div class="content has-text-justified">
+            Videos have been compressed.
+          </div>
+          <video id="replay-video" controls muted preload playsinline width="100%">
+            <source src="./assets/ChronosObserver/videos/Ours/example1.mp4" type="video/mp4">
+          </video>
+          <video id="replay-video" controls muted preload playsinline width="100%">
+            <source src="./assets/ChronosObserver/videos/Ours/example2.mp4" type="video/mp4">
+          </video>
+          <video id="replay-video" controls muted preload playsinline width="100%">
+            <source src="./assets/ChronosObserver/videos/Ours/example3.mp4" type="video/mp4">
+          </video>
+          <video id="replay-video" controls muted preload playsinline width="100%">
+            <source src="./assets/ChronosObserver/videos/Ours/example4.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          This website is constructed with the template provided by <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. We are grateful for their template.
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>
