@@ -34,6 +34,11 @@
               </a>
             </-->
             <div class="column">
+              <a href="https://arxiv.org/html/2408.01840v2" target="_blank">
+                <p class="link"  style="font-size: 24px; margin-top:5px; margin-bottom: 15px;">[Arxiv]</p>
+              </a>
+            </div>
+            <div class="column">
               <a href="https://github.com/iCVTEAM/E3NeRF" target="_blank">
                 <p class="link"  style="font-size: 24px; margin-top:5px; margin-bottom: 15px;">[Code]</p>
               </a>
@@ -51,20 +56,63 @@
     </section>
 
 
-    <!--div style="text-align: center;">
+    <div style="text-align: center;">
       <div class="head_cap">
         <p style="font-size: 20px">
-          <b>The Framework of E<sup>2</sup>NeRF</b>
+          <b>The Motivation of E<sup>3</sup>NeRF</b>
         </p>
       </div>
       <div class="container" style="max-width:850px">
         <div style="text-align: center;">
-          <img src="./assets/E2NeRF/method.png" class="centerImage">
+          <img src="./assets/E3NeRF/motivation.png" class="centerImage">
         </div>
       </div>
+    </div>
 
-    </div-->
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container" style="max-width: 800px" >
+          <h1 style="">Abstract</h1>
+          <p  style="text-align: justify; font-size: 16px;">
+            Neural Radiance Fields (NeRF) achieves impressive novel view rendering performance by learning implicit 3D representation from sparse view images.
+            However, it is difficult to reconstruct a sharp NeRF from blurry input that often occurs in the wild.
+            To solve this problem, we propose a novel Efficient Event-Enhanced NeRF (E<sup>3</sup>NeRF), reconstructing sharp NeRF by utilizing both blurry images and corresponding event streams.
+            A blur rendering loss and an event rendering loss are introduced, which guide the NeRF training via modeling the physical image motion blur process and event generation process, respectively.
+            To improve the efficiency of the framework, we further leverage the latent spatial-temporal blur information in the event stream to evenly distribute training over temporal blur and focus training on spatial blur.
+            Moreover, a camera pose estimation framework for real-world data is built with the guidance of the events, generalizing the method to more practical applications.
+            Compared to previous image-based and event-based NeRF works, our framework makes more profound use of the internal relationship between events and images.
+            Extensive experiments on both synthetic data and real-world data demonstrate that E<sup>3</sup>NeRF can effectively learn a sharp NeRF from blurry images, especially for high-speed non-uniform motion and low-light scenes.
+          </p>
+        </div>
+      </div>
+    </section>
 
+    <div style="text-align: center;">
+      <div class="head_cap">
+        <p style="font-size: 20px">
+          <b>The Framework of E<sup>3</sup>NeRF</b>
+        </p>
+      </div>
+      <div class="container" style="max-width:850px">
+        <div style="text-align: center;">
+          <img src="./assets/E3NeRF/framework.png" class="centerImage">
+        </div>
+      </div>
+    </div>
+
+    
+    <div style="text-align: center;">
+      <div class="head_cap">
+        <p style="font-size: 20px">
+          <b>The Results of E<sup>3</sup>NeRF</b>
+        </p>
+      </div>
+      <div class="container" style="max-width:850px">
+        <div style="text-align: center;">
+          <img src="./assets/E3NeRF/gif.gif" class="centerImage">
+        </div>
+      </div>
+    </div>
 
     <div style="text-align: center;">
       <div class="head_cap">
@@ -88,25 +136,6 @@
         </div>
       </div>
     </div>
-
-
-    <!--section class="hero">
-      <div class="hero-body">
-        <div class="container" style="max-width: 800px" >
-          <h1 style="">Abstract</h1>
-          <p  style="text-align: justify; font-size: 16px;">
-            Neural Radiance Fields (NeRF) achieves impressive rendering performance by learning volumetric 3D representation from several images of different views.
-            However, it is difficult to reconstruct a sharp NeRF from blurry input as often occurred in the wild.
-            To solve this problem, we propose a novel Event-Enhanced NeRF (E<sup>2</sup>NeRF) by utilizing the combination data of a bio-inspired event camera and a standard RGB camera.
-            To effectively introduce event stream into the learning process of neural volumetric representation, we propose a blur rendering loss and an event rendering loss, which guide the network via modelling real blur process and event generation process, respectively.
-            Moreover, a camera pose estimation framework for real-world data is built with the guidance of event stream to generalize the method to practical applications.
-            In contrast to previous image-based or event-based NeRF, our framework effectively utilizes the internal relationship between events and images.
-            As a result, E<sup>2</sup>NeRF not only achieves image deblurring but also achieves high-quality novel view image generation.
-            Extensive experiments on both synthetic data and real-world data demonstrate that E<sup>2</sup>NeRF can effectively learn a sharp NeRF from blurry images, especially in complex and low-light scenes.
-          </p>
-        </div>
-      </div>
-    </section-->
 
 
 
