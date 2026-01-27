@@ -53,7 +53,6 @@
             padding: 0 20px;
         }
 
-        /* Hero */
         .hero {
             text-align: center;
             padding: 80px 0 40px;
@@ -61,29 +60,25 @@
 
         .hero-title-group {
             display: flex;
-            align-items: center;    /* 垂直方向居中对齐，保证 Logo 和文字中线对齐 */
-            justify-content: center; /* 整体在页面居中 */
-            flex-wrap: nowrap;      /* 核心代码：禁止 Flex 容器内的元素换行 */
-            gap: 20px;              /* Logo 和文字之间的间距 */
-            width: 100%;            /* 确保占满宽度 */
-            overflow: hidden;       /* 防止极端情况下溢出 */
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;      
+            gap: 20px;              
+            width: 100%;            
+            overflow: hidden;       
         }
 
-        /* Logo 设置 */
         .hero-logo {
-            height: 100px;          /* 原来的高度设置 */
+            height: 100px;          
             width: auto;
-            flex-shrink: 0;         /* 核心代码：禁止 Logo 在空间不足时被挤压缩小 */
+            flex-shrink: 0;         
         }
 
-        /* 标题设置 */
         h1 {
-            font-size: 2.5rem;      /* 根据需要调整字体大小 */
+            font-size: 2.5rem;      
             font-weight: 800;
-            margin: 0;              /* 去掉默认边距，保证对齐 */
-            white-space: nowrap;    /* 核心代码：强制文字内容在一行内显示，绝不自动换行 */
-            
-            /* 原有的渐变色样式保留 */
+            margin: 0;              
+            white-space: nowrap;    
             background: linear-gradient(to right, #1e293b, #334155);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -106,7 +101,6 @@
         .btn-outline { background-color: transparent; color: #1e293b; border: 1px solid #cbd5e1; }
         .btn-outline:hover { background-color: #f1f5f9; }
 
-        /* Card System */
         .card {
             background: var(--card-bg);
             border-radius: 16px;
@@ -134,19 +128,17 @@
 
         p { text-align: justify; color: #475569; }
 
-        /* --- VIDEO GRID (New Feature for Layout) --- */
         .video-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            grid-template-columns: repeat(2, 1fr); 
             gap: 20px;
             margin-bottom: 30px;
         }
         
-        /* --- SLIDER CSS (Fixed for Classes) --- */
         .comparison-slider {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%; 
             overflow: hidden;
             border-radius: 12px;
             cursor: col-resize;
@@ -195,7 +187,6 @@
         .label-left { left: 20px; }
         .label-right { right: 20px; }
 
-        /* BibTeX */
         pre {
             background: #f1f5f9; padding: 20px;
             border-radius: 8px; overflow-x: auto;
@@ -206,25 +197,21 @@
         @media (max-width: 768px) {
             h1 { font-size: 1.8rem; text-align: center; }
             .hero-title-group { flex-direction: column; }
-            .video-grid { grid-template-columns: 1fr; } /* Stack on mobile */
+            .video-grid { grid-template-columns: 1fr; }
             .card { padding: 20px; }
         }
 
-        /* Ablation 专用的网格布局 */
         .ablation-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 强制分为 3 等份 */
-            gap: 15px; /* 视频之间的间距 */
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 15px; 
             margin-bottom: 40px;
         }
 
-        /* 针对并排布局的微调 */
         .ablation-grid .comparison-slider {
-            margin-bottom: 0; /* 去掉原本单个滑块底部的间距 */
-            /* 注意：宽高比依然由 padding-bottom: 56.25% 维持，不需要改 */
+            margin-bottom: 0; 
         }
 
-        /* 并排时标签字体需要变小，否则太占地方 */
         .ablation-grid .label {
             font-size: 0.6rem; 
             padding: 3px 8px;
@@ -233,13 +220,11 @@
         .ablation-grid .label-left { left: 10px; }
         .ablation-grid .label-right { right: 10px; }
 
-        /* 手机端适配：屏幕小于 768px 时变回单列 */
         @media (max-width: 768px) {
             .ablation-grid {
-                grid-template-columns: 1fr; /* 变回一列 */
+                grid-template-columns: 1fr; 
                 gap: 20px;
             }
-            /* 手机上字体恢复正常大小 */
             .ablation-grid .label {
                 font-size: 0.8rem;
             }
